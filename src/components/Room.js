@@ -3,11 +3,17 @@ import Light from "./Light";
 import "./Room.css";
 
 const Room = () => {
+  console.log("Room Rendering!!!!");
+
   const [lightState, setLightState] = useState({ isOn: false, brightness: 100 });
 
   const toggleLights = () => {
     const isOn = !lightState.isOn;
-    const newLightState = { ...lightState, isOn };
+    //const newLightState = { ...lightState, isOn };
+    const newLightState = { 
+      brightness: lightState.brightness, 
+      isOn: isOn 
+    };
     setLightState(newLightState);
   }
 
@@ -28,7 +34,7 @@ const Room = () => {
           onChange={adjustLightsBrightness}
         />
       </div>
-      <div class="row">
+      <div className="row">
         <Light 
           isOn={lightState.isOn}
           brightness={lightState.brightness} />
