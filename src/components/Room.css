@@ -1,0 +1,40 @@
+#room {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: #222;
+
+    padding: 20px;
+}
+
+#controls {
+    width: 100%;
+    padding: 20px;
+}
+#controls input, #controls button {
+    margin: 10px 20px;
+    display: block;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.light {
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+}
+
+.light.on {
+    background-color: white;
+}
+
+.light.off {
+    background-color: #444;
+}
